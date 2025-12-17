@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comia - Cart</title>
+
+  <!-- MAIN STYLES -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- CART PAGE STYLES -->
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="logo">Comia</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html" class="active">Cart</a>
+      <a href="about.html">About</a>
+      <button class="theme-btn" id="themeToggle">Dark</button>
+    </nav>
+  </header>
+
+  <!-- CART PAGE -->
+  <section class="cart-container">
+    <h1>Your Cart</h1>
+
+    <!-- ITEMS WILL BE LOADED BY cart.js -->
+    <div class="cart-items"></div>
+
+    <!-- TOTAL SECTION -->
+    <div class="cart-summary">
+      <h2>Total:</h2>
+      <p class="cart-total">₦0</p>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+
+</body>
+</html>

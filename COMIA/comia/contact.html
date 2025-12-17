@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comia - Contact Us</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Comia</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="shop.html" class="nav-btn">Shop</a>
+      <a href="cart.html" class="nav-btn">Cart</a>
+      <a href="about.html" class="nav-btn">About</a>
+      <a href="contact.html" class="nav-btn active">Contact</a>
+      <button class="theme-btn" id="themeToggle">Dark</button>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="hero-content">
+      <h1>Get in Touch</h1>
+      <p>Have questions or feedback? We'd love to hear from you!</p>
+    </div>
+  </section>
+
+  <!-- Contact Container -->
+  <section class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-info fade-up">
+      <h2>Our Office</h2>
+      <p>123 Comia Street, Lagos, Nigeria</p>
+      <p>Email: support@comia.com</p>
+      <p>Phone: +234 123 456 7890</p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form fade-up" id="contactForm">
+      <h2>Send Us a Message</h2>
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+      <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="contact-btn">Send Message</button>
+      <p class="form-msg"></p>
+    </form>
+
+  </section>
+
+  <!-- Google Map -->
+  <section class="contact-map fade-up">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." 
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer fade-up">
+    <p>&copy; 2025 Comia. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+
+</body>
+</html>

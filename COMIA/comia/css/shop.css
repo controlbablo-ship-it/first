@@ -1,0 +1,110 @@
+/* ------------------------------
+   SHOP PAGE – COMIA
+------------------------------ */
+
+/* Container */
+.shop-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 120px auto 40px;
+}
+
+/* FILTER BAR */
+.filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: var(--card-bg);
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+/* Price number display */
+#priceValue {
+    font-weight: bold;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+/* PRODUCT IMAGES */
+.product-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* TEXT */
+.product-card h4 {
+    margin: 10px 0 5px;
+    font-size: 17px;
+    color: var(--text-color);
+}
+
+.product-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* ADD TO CART BUTTON */
+.add-btn {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.add-btn:hover {
+    opacity: 0.85;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 600px) {
+    .filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

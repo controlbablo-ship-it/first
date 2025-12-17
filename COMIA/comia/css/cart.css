@@ -1,0 +1,219 @@
+/* ===== COMIA — cart.css (fixed & consistent) ===== */
+
+/* Base colors — will inherit from global light/dark if available */
+:root {
+  --bg: #f5f7fb;
+  --card-bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #4f8cff;
+  --danger: #ff4c4c;
+  --shadow: rgba(16,24,40,0.06);
+}
+
+/* Page container */
+.cart-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 110px auto 60px; /* leaves room for fixed header */
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
+  align-items: start;
+  color: var(--text);
+}
+
+/* Heading */
+.cart-container > h1 {
+  grid-column: 1 / -1;
+  font-size: 1.9rem;
+  margin: 0 0 12px;
+}
+
+/* CART ITEMS column */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Empty state */
+.cart-items .empty {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--muted);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+/* Each cart card */
+.cart-card {
+  display: flex;
+  gap: 18px;
+  background: var(--card-bg);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow);
+  align-items: center;
+}
+
+/* Product image */
+.cart-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #eee;
+}
+
+/* Info column */
+.cart-card .info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-card .info h4 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.cart-card .info p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Quantity controls */
+.qty-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.qty-box button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: #efefef;
+  cursor: pointer;
+  font-weight: 700;
+  display: inline-grid;
+  place-items: center;
+  transition: background .15s, transform .08s;
+}
+
+.qty-box button:active { transform: scale(.98); }
+
+.qty-box span {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Remove button */
+.remove {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* SUMMARY column */
+.cart-summary {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow);
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+/* Summary title/rows */
+.cart-summary h2 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+}
+
+.cart-summary .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.cart-summary .cart-total {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 8px 0 18px;
+}
+
+/* Checkout button */
+.checkout-btn {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .15s, transform .08s;
+}
+
+.checkout-btn:hover { opacity: .95; }
+
+/* Cart count badge (navbar) */
+.cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 880px) {
+  .cart-container {
+    grid-template-columns: 1fr;
+    margin: 100px 18px 40px;
+  }
+
+  .cart-summary {
+    position: static;
+    width: 100%;
+  }
+}
+
+/* Dark mode overrides (uses body.dark) */
+body.dark {
+  --bg: #0b0b0c;
+  --card-bg: #121214;
+  --text: #e6eef8;
+  --muted: #9aa4b2;
+  --accent: #4f8cff;
+  --danger: #ff6b6b;
+  --shadow: rgba(0,0,0,0.6);
+}
+
+/* small niceties */
+.cart-card .info .meta { color: var(--muted); font-size: .95rem; margin-bottom: 8px; }
