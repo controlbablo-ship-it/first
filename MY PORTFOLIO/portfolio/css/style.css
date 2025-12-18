@@ -574,7 +574,7 @@ body {
 /* Very small screens */
 @media (max-width: 420px) {
     .hero h1 {
-        font-size: clamp(1rem, 9vw, 2.2rem);
+        font-size: clamp(1rem, 8vw, 2.2rem);
     }
 
     .hero h2 {
@@ -615,3 +615,4 @@ body {
         transform: translateY(0);
     }
 }
+
