@@ -409,30 +409,55 @@ body {
     }
 }
 
-/* HERO NAME / ANIMATION */
-/* Prevent wrapping during animation and ensure responsive scaling */
-.hero-name {
-    font-size: clamp(2rem, 6vw, 3rem);
-    font-weight: 700;
-    color: #ffffff;
-    white-space: nowrap;        /* keep full name on one line */
-    overflow: visible;         /* allow animated overflow */
-    word-break: normal;
-    overflow-wrap: normal;
+/* HERO CONTENT: allow more flexible width on small screens */
+.hero-content {
+    text-align: center;
+    max-width: 90%;           /* let content use more of the viewport */
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
 }
 
-/* Animated name container: keep inline and prevent wrapping */
+/* HERO NAME: scale responsively and avoid overflow by shrinking */
+.hero-name {
+    font-weight: 700;
+    color: #ffffff;
+    display: inline-block;
+    white-space: nowrap;                /* prefer single line */
+    overflow: visible;
+    word-break: normal;
+    overflow-wrap: normal;
+    font-size: clamp(1.6rem, 5.5vw, 3rem); /* responsive sizing that shrinks on small screens */
+    line-height: 1;
+    max-width: 100%;
+}
+
+/* Animated name container: keep inline but allow scaling */
 .animated-name {
     display: inline-block;
     color: #00e5ff;
-    overflow: hidden;
-    white-space: nowrap;       /* prevent internal wrapping */
+    white-space: nowrap;       /* keep the animated sequence on one line */
+    vertical-align: middle;
+    transform-origin: left center;
 }
 
-/* Each animated span should be inline-block for transforms but not wrap */
+/* Each animated span: inline-block for transforms, no wrapping */
 .animated-name span {
     display: inline-block;
     white-space: nowrap;
+}
+
+/* Extra safety: if viewport is very narrow, reduce hero-name further to prevent wrap */
+@media (max-width: 420px) {
+    .hero-name {
+        font-size: clamp(1.2rem, 6.5vw, 2.2rem);
+        letter-spacing: -0.5px; /* subtle tightening to help fit */
+    }
+
+    .hero-content {
+        max-width: 96%;
+        padding: 0 8px;
+    }
 }
 
 /* ===========================
@@ -592,3 +617,4 @@ body {
         transform: translateY(0);
     }
 }
+
