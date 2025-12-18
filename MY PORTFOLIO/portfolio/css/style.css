@@ -219,7 +219,7 @@ body {
 }
 
 /* Mobile Styles */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
     .navbar {
         padding: 20px 30px;
@@ -524,8 +524,6 @@ body {
     background-color: #00e5ff;
     transform: translateY(-3px);
 }
-
-
 
 
 
