@@ -406,13 +406,13 @@ body {
 }
 
 .animated-name {
-    display:inline-flex;
+    display:run-in;
     color: #00e5ff;
     overflow: hidden;
 }
 
 .animated-name span {
-    display:inline-flex;
+    display:run-in;
 }
 /* ===========================
    SKILLS SECTION
@@ -524,6 +524,7 @@ body {
     background-color: #00e5ff;
     transform: translateY(-3px);
 }
+
 
 
 
