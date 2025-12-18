@@ -410,29 +410,20 @@ body {
 }
 
 /* HERO NAME / ANIMATION */
-/* Prevent wrapping during animation and ensure responsive scaling */
 .hero-name {
     font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 700;
     color: #ffffff;
-    white-space: nowrap;        /* keep full name on one line */
-    overflow: visible;         /* allow animated overflow */
-    word-break: normal;
-    overflow-wrap: normal;
 }
 
-/* Animated name container: keep inline and prevent wrapping */
 .animated-name {
     display: inline-block;
     color: #00e5ff;
     overflow: hidden;
-    white-space: nowrap;       /* prevent internal wrapping */
 }
 
-/* Each animated span should be inline-block for transforms but not wrap */
 .animated-name span {
     display: inline-block;
-    white-space: nowrap;
 }
 
 /* ===========================
@@ -573,11 +564,6 @@ body {
 
     .about-image img {
         max-width: 220px;
-    }
-
-    /* If the name is still too long on very small screens, allow it to scale down */
-    .hero-name {
-        font-size: clamp(1.4rem, 7.5vw, 2.4rem);
     }
 }
 
