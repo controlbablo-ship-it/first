@@ -58,34 +58,20 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
+    text-align: center;
 }
 
 .hero-content {
-    text-align: center;
+    width: 100%;
     max-width: 700px;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 24px;
-    color: #00ffd5;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    margin-bottom: 30px;
-    color: #cccccc;
-}
-
-/* Hero Name Animation */
+.hero h1,
 .hero-name {
-    font-size: 3rem;
+    font-size: 48px;
     font-weight: 700;
     color: #ffffff;
+    word-wrap: break-word;
 }
 
 .animated-name {
@@ -96,6 +82,17 @@ body {
 
 .animated-name span {
     display: inline-flex;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #00ffd5;
+    margin: 20px 0;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    color: #cccccc;
 }
 
 /* BUTTONS */
@@ -219,9 +216,7 @@ body {
     box-shadow: 0 20px 40px rgba(0, 255, 213, 0.15);
 }
 
-/* ===========================
-   HAMBURGER MENU
-=========================== */
+/* HAMBURGER MENU */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -236,8 +231,9 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Mobile Styles for Navbar & Hamburger */
+/* MOBILE STYLES (TABLETS & PHONES) */
 @media (max-width: 768px) {
+
     .navbar {
         padding: 20px 30px;
     }
@@ -278,219 +274,32 @@ body {
     }
 }
 
-/* ===========================
-   PROJECT IMAGES
-=========================== */
-.project-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
+/* SMALL PHONES */
+@media (max-width: 480px) {
 
-/* ===========================
-   MODAL STYLES
-=========================== */
-.project-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-    z-index: 2000;
-}
+    .hero {
+        padding: 0 10px;
+    }
 
-.project-modal.active {
-    opacity: 1;
-    pointer-events: all;
-}
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+    }
 
-.modal-content {
-    background: #111;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    transform: scale(0.9);
-    transition: transform 0.4s ease;
-}
+    .hero h1,
+    .hero-name {
+        font-size: 1.6rem; /* smaller font for phones */
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
 
-.project-modal.active .modal-content {
-    transform: scale(1);
-}
+    .hero h2 {
+        font-size: 1rem;
+    }
 
-.modal-content img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.close-modal {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.modal-links {
-    margin-top: 20px;
-}
-
-.about-info {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-    background: #111;
-    padding: 30px;
-    border-radius: 14px;
-}
-
-.info-item {
-    display: flex;
-    gap: 10px;
-    font-size: 16px;
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeUp 0.6s ease forwards;
-}
-
-.info-item:nth-child(1) { animation-delay: 0.1s; }
-.info-item:nth-child(2) { animation-delay: 0.2s; }
-.info-item:nth-child(3) { animation-delay: 0.3s; }
-.info-item:nth-child(4) { animation-delay: 0.4s; }
-
-.label {
-    font-weight: 600;
-    color: #aaa;
-    min-width: 80px;
-}
-
-.value {
-    color: #fff;
-}
-
-.about-wrapper {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 280px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #00e5ff;
-    margin: auto;
-}
-
-.about-info {
-    margin-top: 30px;
-    display: grid;
-    gap: 15px;
-}
-
-.value a {
-    color: #00e5ff;
-    text-decoration: none;
-}
-
-.value a:hover {
-    text-decoration: underline;
-}
-
-/* ===========================
-   SKILLS SECTION
-=========================== */
-#skills {
-  padding: 50px 20px;
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-}
-
-#skills h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-
-.skill {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #1e1e1e;
-  padding: 12px 20px;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill:hover {
-  transform: translateY(-6px);
-  background-color: #333;
-  box-shadow: 0 10px 20px rgba(0, 255, 213, 0.2);
-}
-
-.skill i,
-.skill .skill-icon {
-  width: 28px;
-  height: 28px;
-  font-size: 28px;
-  flex-shrink: 0;
-}
-
-.skill .skill-icon {
-  fill: #f0f0f0;
-}
-
-/* ===========================
-   SERVICES SECTION
-=========================== */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.service-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card h3 {
-  margin-bottom: 1rem;
-  color: #00ffd5;
-  font-size: 1.25rem;
-}
-
-.service-card p {
-  color: #cfcfcf;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 255, 213, 0.15);
+    .hero p {
+        font-size: 0.85rem;
+    }
 }
 
 /* BACK TO TOP BUTTON */
@@ -519,33 +328,3 @@ body {
     background-color: #00e5ff;
     transform: translateY(-3px);
 }
-
-/* ===========================
-   MOBILE HERO RESPONSIVENESS
-=========================== */
-@media (max-width: 480px) {
-    .hero {
-        padding: 0 10px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .hero h1,
-    .hero-name {
-        font-size: 1.6rem; /* smaller font for very small phones */
-        line-height: 1.2;
-        word-wrap: break-word; /* allow text to wrap */
-    }
-
-    .hero h2 {
-        font-size: 1rem;
-    }
-
-    .hero p {
-        font-size: 0.85rem;
-    }
-}
-
