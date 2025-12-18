@@ -81,6 +81,23 @@ body {
     color: #cccccc;
 }
 
+/* Hero Name Animation */
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.animated-name {
+    display: inline-flex;
+    color: #00e5ff;
+    overflow: hidden;
+}
+
+.animated-name span {
+    display: inline-flex;
+}
+
 /* BUTTONS */
 .btn {
     padding: 12px 30px;
@@ -196,14 +213,15 @@ body {
     background: #0a0a0a;
     color: #777;
 }
+
 .project-card:hover,
 .skill-card:hover {
     box-shadow: 0 20px 40px rgba(0, 255, 213, 0.15);
 }
+
 /* ===========================
    HAMBURGER MENU
 =========================== */
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -218,9 +236,8 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Mobile Styles */
+/* Mobile Styles for Navbar & Hamburger */
 @media (max-width: 768px) {
-
     .navbar {
         padding: 20px 30px;
     }
@@ -250,7 +267,17 @@ body {
     .hamburger {
         display: flex;
     }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .info-item {
+        justify-content: center;
+    }
 }
+
 /* ===========================
    PROJECT IMAGES
 =========================== */
@@ -313,6 +340,7 @@ body {
 .modal-links {
     margin-top: 20px;
 }
+
 .about-info {
     margin-top: 30px;
     display: grid;
@@ -346,6 +374,7 @@ body {
 .value {
     color: #fff;
 }
+
 .about-wrapper {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -368,17 +397,6 @@ body {
     gap: 15px;
 }
 
-.info-item {
-    display: flex;
-    gap: 10px;
-}
-
-.label {
-    font-weight: 600;
-    color: #aaa;
-    min-width: 80px;
-}
-
 .value a {
     color: #00e5ff;
     text-decoration: none;
@@ -388,38 +406,12 @@ body {
     text-decoration: underline;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .about-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .info-item {
-        justify-content: center;
-    }
-}
-.hero-name {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.animated-name {
-    display:inline-flex;
-    color: #00e5ff;
-    overflow: hidden;
-}
-
-.animated-name span {
-    display:inline-flex;
-}
 /* ===========================
    SKILLS SECTION
 =========================== */
 #skills {
   padding: 50px 20px;
-  background-color: #111; /* Dark section background */
+  background-color: #111;
   color: #fff;
   text-align: center;
 }
@@ -463,8 +455,9 @@ body {
 }
 
 .skill .skill-icon {
-  fill: #f0f0f0; /* SVG icon color */
+  fill: #f0f0f0;
 }
+
 /* ===========================
    SERVICES SECTION
 =========================== */
@@ -499,6 +492,8 @@ body {
   transform: translateY(-8px);
   box-shadow: 0 10px 30px rgba(0, 255, 213, 0.15);
 }
+
+/* BACK TO TOP BUTTON */
 #back-to-top {
     position: fixed;
     bottom: 30px;
@@ -513,7 +508,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    display: none; /* hidden initially */
+    display: none;
     align-items: center;
     justify-content: center;
     box-shadow: 0 8px 20px rgba(0, 255, 213, 0.2);
@@ -525,6 +520,25 @@ body {
     transform: translateY(-3px);
 }
 
+/* ===========================
+   MOBILE HERO RESPONSIVENESS
+=========================== */
+@media (max-width: 480px) {
+    .hero h1,
+    .hero-name {
+        font-size: 2rem; /* shrink hero name */
+        line-height: 1.2;
+    }
 
+    .hero h2 {
+        font-size: 1.2rem;
+    }
 
+    .hero p {
+        font-size: 0.9rem;
+    }
 
+    .hero-content {
+        max-width: 90%;
+    }
+}
