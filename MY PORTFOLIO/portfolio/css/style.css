@@ -328,3 +328,92 @@ body {
     background-color: #00e5ff;
     transform: translateY(-3px);
 }
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Hero Name */
+.hero-name {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.animated-name {
+    display: inline;          /* allow wrapping */
+    color: #00e5ff;
+    white-space: normal;      /* allow text to break onto next line */
+}
+
+/* Hero Subheading */
+.hero h2 {
+    font-size: 24px;
+    color: #00ffd5;
+    margin: 20px 0;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+/* BUTTONS */
+.hero-buttons .btn {
+    margin: 0 5px;
+}
+
+/* ===== RESPONSIVE HERO ===== */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 0 10px;
+    }
+
+    .hero-name {
+        font-size: 24px;  /* scale down for phones */
+    }
+
+    .animated-name {
+        display: inline;  /* wrap long names */
+        word-break: break-word;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
