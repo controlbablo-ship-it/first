@@ -13,6 +13,7 @@ body {
     background: #0f0f0f;
     color: #ffffff;
     line-height: 1.6;
+    font-size: clamp(14px, 1.2vw, 18px); /* Responsive base font size */
 }
 
 /* NAVBAR */
@@ -45,6 +46,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    font-size: clamp(0.9rem, 2.5vw, 1rem); /* Responsive nav text */
 }
 
 .nav-links a:hover {
@@ -66,12 +68,12 @@ body {
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsive heading */
     margin-bottom: 10px;
 }
 
 .hero h2 {
-    font-size: 24px;
+    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive subheading */
     color: #00ffd5;
     margin-bottom: 20px;
 }
@@ -112,12 +114,12 @@ body {
 
 /* SECTIONS */
 .section {
-    padding: 100px 60px;
+    padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 60px); /* Responsive padding */
     text-align: center;
 }
 
 .section-title {
-    font-size: 32px;
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive section title */
     margin-bottom: 20px;
 }
 
@@ -196,10 +198,12 @@ body {
     background: #0a0a0a;
     color: #777;
 }
+
 .project-card:hover,
 .skill-card:hover {
     box-shadow: 0 20px 40px rgba(0, 255, 213, 0.15);
 }
+
 /* ===========================
    HAMBURGER MENU
 =========================== */
@@ -251,6 +255,7 @@ body {
         display: flex;
     }
 }
+
 /* ===========================
    PROJECT IMAGES
 =========================== */
@@ -313,14 +318,17 @@ body {
 .modal-links {
     margin-top: 20px;
 }
+
+/* ABOUT */
 .about-info {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
+    gap: clamp(10px, 3vw, 18px); /* Responsive gap */
     background: #111;
     padding: 30px;
     border-radius: 14px;
+    font-size: clamp(0.9rem, 2.5vw, 1rem); /* Responsive text */
 }
 
 .info-item {
@@ -346,6 +354,7 @@ body {
 .value {
     color: #fff;
 }
+
 .about-wrapper {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -399,21 +408,24 @@ body {
         justify-content: center;
     }
 }
+
+/* HERO NAME / ANIMATION */
 .hero-name {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 700;
     color: #ffffff;
 }
 
 .animated-name {
-    display:run-in;
+    display: inline-block;
     color: #00e5ff;
     overflow: hidden;
 }
 
 .animated-name span {
-    display:run-in;
+    display: inline-block;
 }
+
 /* ===========================
    SKILLS SECTION
 =========================== */
@@ -425,7 +437,7 @@ body {
 }
 
 #skills h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 30px;
 }
 
@@ -443,7 +455,7 @@ body {
   background-color: #1e1e1e;
   padding: 12px 20px;
   border-radius: 12px;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -465,6 +477,7 @@ body {
 .skill .skill-icon {
   fill: #f0f0f0; /* SVG icon color */
 }
+
 /* ===========================
    SERVICES SECTION
 =========================== */
@@ -499,6 +512,8 @@ body {
   transform: translateY(-8px);
   box-shadow: 0 10px 30px rgba(0, 255, 213, 0.15);
 }
+
+/* BACK TO TOP */
 #back-to-top {
     position: fixed;
     bottom: 30px;
@@ -525,6 +540,41 @@ body {
     transform: translateY(-3px);
 }
 
+/* Small tweaks for very small screens */
+@media (max-width: 420px) {
+    .hero h1 {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
 
+    .hero h2 {
+        font-size: clamp(1rem, 4.5vw, 1.2rem);
+    }
 
+    .section {
+        padding: clamp(40px, 8vw, 60px) 16px;
+    }
 
+    .nav-links {
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .about-image img {
+        max-width: 220px;
+    }
+}
+
+/* Simple fadeUp keyframes used by info-item animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
