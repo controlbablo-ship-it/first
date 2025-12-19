@@ -319,7 +319,6 @@ body {
 @media (max-width: 420px) {
   .hero h1 {
     font-size: clamp(1rem, 9.5vw, 2.2rem);
-     white-space: nowrap;
   }
 
   .hero h2 {
@@ -593,4 +592,5 @@ body {
     transform: translateY(0);
   }
 }
+
 
