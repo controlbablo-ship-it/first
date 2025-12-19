@@ -9,59 +9,35 @@
     <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Portfolio">
     <meta name="author" content="Babalola Rokeeb Kehinde">
 
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
 
-<!-- ===========================
-     NAVBAR
-=========================== -->
 <header class="navbar">
     <div class="logo">BRK</div>
-
     <nav class="nav">
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
-    <div class="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="hamburger">
+        <span></span><span></span><span></span>
     </div>
 </header>
 
-<!-- ===========================
-     HERO
-=========================== -->
 <section id="home" class="hero">
     <div class="hero-content animate">
-        <h1 class="hero-name">
-            I am
-            <span class="animated-name">
-                <span>Babalola</span>
-                <span>Rokeeb</span>
-                <span>Kehinde</span>
-            </span>
-        </h1>
-
+        <h1 class="hero-name">I am <span class="animated-name">Babalola Rokeeb Kehinde</span></h1>
         <h2>Frontend Developer in Progress</h2>
-
         <p>I build modern, responsive, and animated web interfaces.</p>
-        <p>Learning today, building tomorrow.</p>
-
+        <p>Learning today, building tomorrow</p>
         <div class="hero-buttons">
             <a href="#projects" class="btn primary">View Projects</a>
             <a href="#contact" class="btn secondary">Hire Me</a>
@@ -69,154 +45,83 @@
     </div>
 </section>
 
-<!-- ===========================
-     ABOUT
-=========================== -->
 <section id="about" class="section animate">
     <h2 class="section-title">About Me</h2>
-
     <div class="about-wrapper">
         <div class="about-text">
             <p class="section-text">
-                My name is <strong>Babalola Rokeeb Kehinde</strong>. I am a passionate Frontend Developer
+                My name is <b>Babalola Rokeeb Kehinde</b>. I am a passionate Frontend Developer
                 and a 400-level undergraduate student of Kwara State University (KWASU),
                 currently building a strong foundation in modern web development.
             </p>
-
             <div class="about-info">
-                <div class="info-item">
-                    <span class="label">Name:</span>
-                    <span class="value">Babalola Rokeeb Kehinde</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Profile:</span>
-                    <span class="value">Frontend Developer (In Progress)</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Email:</span>
-                    <span class="value">
-                        <a href="mailto:controlbablo@gmail.com">controlbablo@gmail.com</a>
-                    </span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Phone:</span>
-                    <span class="value">
-                        <a href="tel:+2347054195640">+234 705 419 5640</a>
-                    </span>
-                </div>
+                <div class="info-item"><span class="label">Name:</span><span class="value">Babalola Rokeeb Kehinde</span></div>
+                <div class="info-item"><span class="label">Profile:</span><span class="value">Frontend Developer (In Progress)</span></div>
+                <div class="info-item"><span class="label">Email:</span><span class="value"><a href="mailto:controlbablo@gmail.com">controlbablo@gmail.com</a></span></div>
+                <div class="info-item"><span class="label">Phone:</span><span class="value"><a href="tel:+2347054195640">+234 705 419 5640</a></span></div>
             </div>
         </div>
-
         <div class="about-image">
-            <img src="assets/images/port.jpeg" alt="Babalola Rokeeb Kehinde portrait">
+            <img src="assets/images/port.jpeg" alt="Babalola Rokeeb Kehinde">
         </div>
     </div>
 </section>
 
-<!-- ===========================
-     SKILLS
-=========================== -->
 <section id="skills">
     <h2>My Skills</h2>
-
     <div class="skills-container">
         <div class="skill"><i class="devicon-html5-plain colored"></i> HTML5</div>
         <div class="skill"><i class="devicon-css3-plain colored"></i> CSS3</div>
         <div class="skill"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-
         <div class="skill">
             <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                    d="M4 3h16a1 1 0 011 1v12a1 1 0 01-1 1h-5v2h1v2H9v-2h1v-2H4a1 1 0 01-1-1V4a1 1 0 011-1zM4 5v10h16V5H4z"/>
+                <path fill="currentColor" d="M4 3h16a1 1 0 011 1v12a1 1 0 01-1 1h-5v2h1v2H9v-2h1v-2H4a1 1 0 01-1-1V4a1 1 0 011-1zm0 2v10h16V5H4zm5 12h6v2H9v-2z"/>
             </svg>
             Responsive Design
         </div>
-
         <div class="skill"><i class="devicon-git-plain colored"></i> Git & GitHub</div>
     </div>
 </section>
 
-<!-- ===========================
-     SERVICES
-=========================== -->
 <section id="services" class="section animate">
     <h2 class="section-title">What I Do</h2>
-
     <div class="services-grid">
-        <div class="service-card">
-            <h3>Frontend Development</h3>
-            <p>I build clean, modern, and scalable user interfaces using HTML, CSS, and JavaScript.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Responsive Web Design</h3>
-            <p>I design and develop websites that work seamlessly across all devices.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>UI Animations</h3>
-            <p>I create smooth and engaging animations that enhance user experience.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Website Optimization</h3>
-            <p>I optimize websites for speed, accessibility, and usability.</p>
-        </div>
+        <div class="service-card"><h3>Frontend Development</h3><p>I build clean, modern, and scalable user interfaces using HTML, CSS, and JavaScript.</p></div>
+        <div class="service-card"><h3>Responsive Web Design</h3><p>I design and develop websites that work seamlessly across all devices.</p></div>
+        <div class="service-card"><h3>UI Animations</h3><p>I create smooth and engaging animations that enhance user experience without compromising performance.</p></div>
+        <div class="service-card"><h3>Website Optimization</h3><p>I optimize websites for speed, accessibility, and usability to ensure better performance.</p></div>
     </div>
 </section>
 
-<!-- ===========================
-     PROJECTS
-=========================== -->
 <section id="projects" class="section animate">
     <h2 class="section-title">Projects</h2>
-
     <div class="projects-grid">
-        <div class="project-card"
-            data-title="Animated Portfolio"
-            data-description="A modern animated portfolio with GSAP, responsive layout, and clean UI."
-            data-live="https://controlbablo-ship-it.github.io/first/COMIA/comia/"
-            data-github="https://github.com/controlbablo-ship-it/first/COMIA/comia/">
-
-            <img src="assets/images/Animated Portfolio.png" alt="Animated Portfolio project">
-            <h3><u>Animated Portfolio</u></h3>
+        <div class="project-card" data-title="Animated Portfolio" data-description="A modern animated portfolio with GSAP, responsive layout, and clean UI." data-live="https://controlbablo-ship-it.github.io/first/COMIA/comia/" data-github="https://github.com/controlbablo-ship-it/first/COMIA/comia/" data-image="assets/images/project1.jpg">
+            <img src="assets/images/Animated Portfolio.png" alt="Animated Portfolio">
+            <h3 style="color: aquamarine;"><u>Animated Portfolio</u></h3>
         </div>
-
-        <div class="project-card"
-            data-title="E-commerce Frontend"
-            data-description="Responsive e-commerce UI with product pages, cart system, and clean architecture."
-            data-live="https://controlbablo-ship-it.github.io/first/COMIA/comia/"
-            data-github="https://github.com/controlbablo-ship-it/first/COMIA/comia/">
-
-            <img src="assets/images/E-commerce Frontend.png" alt="E-commerce Frontend project">
+        <div class="project-card" data-title="E-commerce Frontend" data-description="Responsive e-commerce UI with product pages, cart system, and clean architecture." data-live="https://controlbablo-ship-it.github.io/first/COMIA/comia/" data-github="https://github.com/controlbablo-ship-it/first/COMIA/comia/" data-image="assets/images/project2.jpg">
+            <img src="assets/images/E-commerce Frontend.png" alt="E-commerce Frontend">
             <h3><u>E-commerce Frontend</u></h3>
         </div>
     </div>
 </section>
 
-<!-- ===========================
-     PROJECT MODAL
-=========================== -->
 <div class="project-modal">
     <div class="modal-content">
-        <span class="close-modal" aria-label="Close modal">&times;</span>
+        <span class="close-modal">&times;</span>
         <img id="modal-image" src="" alt="">
         <h3 id="modal-title"></h3>
         <p id="modal-description"></p>
-
         <div class="modal-links">
-            <a id="modal-live" class="btn primary" target="_blank">Live Demo</a>
-            <a id="modal-github" class="btn secondary" target="_blank">GitHub</a>
+            <a id="modal-live" class="btn primary" href="#" target="_blank">Live Demo</a>
+            <a id="modal-github" class="btn secondary" href="#" target="_blank">GitHub</a>
         </div>
     </div>
 </div>
 
-<!-- ===========================
-     CONTACT
-=========================== -->
 <section id="contact" class="section animate">
     <h2 class="section-title">Contact</h2>
-
     <form id="contact-form" class="contact-form">
         <input type="text" name="user_name" placeholder="Your Name" required>
         <input type="email" name="user_email" placeholder="Your Email" required>
@@ -226,18 +131,12 @@
     </form>
 </section>
 
-<!-- ===========================
-     FOOTER
-=========================== -->
 <footer class="footer">
     <p>© 2025 Babalola Rokeeb Kehinde. All Rights Reserved.</p>
 </footer>
 
 <button id="back-to-top" title="Go to top">&#8679;</button>
 
-<!-- ===========================
-     SCRIPTS
-=========================== -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="js/main.js"></script>
