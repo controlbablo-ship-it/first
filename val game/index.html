@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ayinke</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Part 1: The Question -->
+        <div id="question-container" class="card fade-in">
+            <h1 class="title">Ayinke...</h1>
+            <p class="subtitle">Will you be my Valentine?</p>
+            <div class="buttons">
+                <button id="yes-btn" onclick="showLove()">YES</button>
+                <button id="no-btn" onmouseover="moveButton()" onclick="moveButton()">NO</button>
+            </div>
+            <div class="floating-hearts"></div>
+        </div>
+
+        <!-- Part 2: The Letter (Hidden initially) -->
+        <div id="letter-container" class="hidden">
+
+            <!-- Card 1: Joy -->
+            <div class="letter-card" id="card-1">
+                <h2>Yay! ❤️</h2>
+                <p>Thank you, Ayinke.</p>
+                <p>Thank you for saying Yes. It truly means everything to me to have you as my Valentine.</p>
+                <p>You have made my heart so happy.</p>
+                <button class="next-btn" onclick="nextCard(2)">Read my heart...</button>
+            </div>
+
+            <!-- Card 2: The Apology -->
+            <div class="letter-card hidden" id="card-2">
+                <h2>I am Sorry... 😔</h2>
+                <div class="scroll-content">
+                    <p>I know I did a lot of things that hurt you, and for that, I am deeply, deeply sorry.</p>
+                    <p>I've realized my mistakes and I've truly worked on myself during this time apart.</p>
+                    <p>Sometimes I may be childish, but that is only because I see you as my <strong>"second
+                            mum"</strong>.</p>
+                    <p>Which mother would leave her baby to be sad for nearly a month and a half? I have missed you so
+                        terribly.</p>
+                    <button class="next-btn" onclick="nextCard(3)">Continue...</button>
+                </div>
+            </div>
+
+            <!-- Card 3: Understanding & New Person -->
+            <div class="letter-card hidden" id="card-3">
+                <h2>A New Me</h2>
+                <div class="scroll-content">
+                    <p>I want you to know that I am a new person now. I am not here to waste your time—I have never had
+                        that intention in my life.</p>
+                    <p><strong>You are my first.</strong> I don't want anybody else. I love you with everything I have.
+                    </p>
+                    <p>I believe that even if we have issues, <strong>communication and understanding is the
+                            key</strong>.</p>
+                    <p>I am not trying to invade your peace, I just want a fresh start with my soulmate.</p>
+                    <p class="highlight">I MISS MY SWEET GIRL 😭</p>
+                    <button class="next-btn" onclick="nextCard(4)">One last thing...</button>
+                </div>
+            </div>
+
+            <!-- Card 4: Wishes -->
+            <div class="letter-card hidden" id="card-4">
+                <h2>For You 🌹</h2>
+                <p>For the sake of the coming <strong>RAMADAN</strong>, let us find peace again.</p>
+                <hr>
+                <p>Also, I know you are doing your exams.</p>
+                <p class="wish">Good luck! You will do amazing! 🌟</p>
+                <p>I love you deeply.</p>
+                <button class="next-btn" onclick="restart()">Love, Always ❤️</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
